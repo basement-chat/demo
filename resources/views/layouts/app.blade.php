@@ -32,5 +32,7 @@
                 {{ $slot }}
             </main>
         </div>
+
+        <x-basement::chat-box />
     </body>
 </html>

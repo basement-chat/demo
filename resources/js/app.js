@@ -1,7 +1,7 @@
 import './bootstrap';
+import basement from '../../vendor/basement-chat/basement-chat/dist/basement.plugin.esm';
+import intersect from '@alpinejs/intersect';
 
-import Alpine from 'alpinejs';
-
-window.Alpine = Alpine;
-
-Alpine.start();
+window.Alpine.plugin(intersect);
+window.Alpine.plugin(basement);
+window.Alpine.start();

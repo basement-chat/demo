@@ -1,3 +1,5 @@
+@import '../../vendor/basement-chat/basement-chat/dist/basement.bundle.min.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
