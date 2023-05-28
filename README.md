@@ -1,7 +1,7 @@
 <div align="center">
   <p><a href="https://github.com/basement-chat/basement-chat"><img src="https://raw.githubusercontent.com/basement-chat/basement-chat/main/assets/basement-chat.svg" alt="Basement Chat Logo" height="60"/></a></p>
   <h1>Basement Chat Demo</h1>
-  <p>[Basement Chat](https://github.com/basement-chat/basement-chat) demo integration with Laravel Breeze and Pusher</p>
+  <p>Basement Chat demo integration with Laravel Breeze and Pusher</p>
 </div>
 
 ## Table of Contents
@@ -36,5 +36,5 @@ This is a demo implementation of the [Basement Chat package](https://github.com/
   - Build assets `npm run build`
   - Finally, run the Laravel HTTP server `php artisan serve` and open your browser
 
-# Comparing which files were changed
+## Comparing which files were changed
 To compare which files are changed in this repo when integrating the Basement Chat package, you can visit [the following page](https://github.com/basement-chat/demo/compare/feb0e7fd1aa51b8cd1835bcc8b8e62686f625199..4475c4174e0df6d31119bca39f347b071b9baa61).
