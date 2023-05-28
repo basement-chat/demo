@@ -1,66 +1,40 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
+  <p><a href="https://github.com/basement-chat/basement-chat"><img src="https://raw.githubusercontent.com/basement-chat/basement-chat/main/assets/basement-chat.svg" alt="Basement Chat Logo" height="60"/></a></p>
+  <h1>Basement Chat Demo</h1>
+  <p>[Basement Chat](https://github.com/basement-chat/basement-chat) demo integration with Laravel Breeze and Pusher</p>
+</div>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Table of Contents
 
-## About Laravel
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Comparing which files were changed](#comparing-which-files-were-changed)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Introduction
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+This is a demo implementation of the [Basement Chat package](https://github.com/basement-chat/basement-chat/) with Laravel Braze and Pusher broadcast driver. Here's a [live demo](https://basement.up.railway.app/) link using Railway, you should register first before trying it (no email verification required).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Installation
 
-## Learning Laravel
+- Requirements:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+  - `git`
+  - `php >= 8.0`
+  - `node.js >= 18`
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- To install this demo repository, you can do the following steps:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+  - Clone this repository `git clone https://github.com/basement-chat/demo.git`
+  - Change your current working directory to `demo`
+  - Install composer dependencies with `composer install` and install npm dependencies with `npm install`
+  - Copy the environment file from `.env.example` to `.env`
+  - Generate the key using `php artisan key:generate`
+  - Configure your database connection in `.env`, you can simply create a new empty file to `database/database.sqlite` if you want to use the default SQLite connection
+  - Create a new Pusher channel and configure your Pusher connection in `.env`
+    > If you want to use a different broadcast driver, see [this installation guide](https://github.com/basement-chat/basement-chat#installation).
+  - Run database migration `php artisan migrate`
+  - Build assets `npm run build`
+  - Finally, run the Laravel HTTP server `php artisan serve` and open your browser
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# Comparing which files were changed
+To compare which files are changed in this repo when integrating the Basement Chat package, you can visit [the following page](https://github.com/basement-chat/demo/compare/feb0e7fd1aa51b8cd1835bcc8b8e62686f625199..4475c4174e0df6d31119bca39f347b071b9baa61).
