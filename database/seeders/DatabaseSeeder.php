@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\User;
+use BasementChat\Basement\Models\PrivateMessage;
+use Database\Factories\PrivateMessageFactory;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,11 +14,34 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        PrivateMessage::truncate();
+        User::truncate();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        $users = User::factory(10)->create();
+        $user = $users->first();
+
+        $senders = $users->skip(1)->flatMap(fn (User $user): array => array_fill(0, 10, $user));
+        $senders->each(function (User $sender, int $index) use ($user, $senders): void {
+            PrivateMessageFactory::new()
+                ->when(
+                    value: fake()->boolean(),
+                    callback: fn (PrivateMessageFactory $factory): PrivateMessageFactory => (
+                        $factory->betweenTwoUsers(receiver: $user, sender: $sender)
+                    ),
+                    default: fn (PrivateMessageFactory $factory): PrivateMessageFactory => (
+                        $factory->betweenTwoUsers(receiver: $sender, sender: $user)
+                    ),
+                )
+                ->create([
+                    'created_at' => now()
+                        ->subHours($senders->count())
+                        ->addMinutes(fake()->numberBetween(1, 55))
+                        ->addHours($index),
+                    'read_at' => now(),
+                ]);
+        });
+
+        dump("Email: $user->email");
+        dump('Password: password');
     }
 }

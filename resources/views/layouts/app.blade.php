@@ -12,7 +12,12 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @if (config('app.basement_package_development') === false)
+            @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @else
+            <link href="{{ vite('resources/css/app.css') }}" rel="stylesheet" />
+            @vite(['resources/js/app.ts'])
+        @endif
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">

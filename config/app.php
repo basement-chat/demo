@@ -185,4 +185,17 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Basement Package Development Mode
+    |--------------------------------------------------------------------------
+    |
+    | If set to true, assets will be loaded from a combination of
+    | resources/js/app.ts vite server and from resources/css/app.css bundled
+    | assets. You should set this as false if you are not going to develop
+    | Basement Chat package.
+    |
+    */
+
+    'basement_package_development' => (bool) env('BASEMENT_PACKAGE_DEVELOPMENT', false),
 ];
