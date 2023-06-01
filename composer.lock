@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "basement-chat/basement-chat",
-            "version": "v1.0.4",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/basement-chat/basement-chat.git",
-                "reference": "73ed42f49cccfd08fc36545068a204e92fe63392"
+                "reference": "9f8148e6e29870eb1975d56465acdb4c852615bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/basement-chat/basement-chat/zipball/73ed42f49cccfd08fc36545068a204e92fe63392",
-                "reference": "73ed42f49cccfd08fc36545068a204e92fe63392",
+                "url": "https://api.github.com/repos/basement-chat/basement-chat/zipball/9f8148e6e29870eb1975d56465acdb4c852615bb",
+                "reference": "9f8148e6e29870eb1975d56465acdb4c852615bb",
                 "shasum": ""
             },
             "require": {
@@ -81,9 +81,9 @@
             ],
             "support": {
                 "issues": "https://github.com/basement-chat/basement-chat/issues",
-                "source": "https://github.com/basement-chat/basement-chat/tree/v1.0.4"
+                "source": "https://github.com/basement-chat/basement-chat/tree/v1.1.0"
             },
-            "time": "2023-05-27T05:57:24+00:00"
+            "time": "2023-06-01T10:30:54+00:00"
         },
         {
             "name": "brick/math",
