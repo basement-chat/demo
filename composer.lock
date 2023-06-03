@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5a56c901aa5aa8c31895dd402439c719",
+    "content-hash": "7c2a86f8def951a07ed882086021dad5",
     "packages": [
         {
             "name": "basement-chat/basement-chat",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/basement-chat/basement-chat.git",
-                "reference": "9f8148e6e29870eb1975d56465acdb4c852615bb"
+                "reference": "8d973333a76551feab407c1f92f37ad794e12f68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/basement-chat/basement-chat/zipball/9f8148e6e29870eb1975d56465acdb4c852615bb",
-                "reference": "9f8148e6e29870eb1975d56465acdb4c852615bb",
+                "url": "https://api.github.com/repos/basement-chat/basement-chat/zipball/8d973333a76551feab407c1f92f37ad794e12f68",
+                "reference": "8d973333a76551feab407c1f92f37ad794e12f68",
                 "shasum": ""
             },
             "require": {
@@ -81,9 +81,9 @@
             ],
             "support": {
                 "issues": "https://github.com/basement-chat/basement-chat/issues",
-                "source": "https://github.com/basement-chat/basement-chat/tree/v1.1.0"
+                "source": "https://github.com/basement-chat/basement-chat/tree/v1.1.1"
             },
-            "time": "2023-06-01T10:30:54+00:00"
+            "time": "2023-06-03T09:37:47+00:00"
         },
         {
             "name": "brick/math",
