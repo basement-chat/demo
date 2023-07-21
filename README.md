@@ -19,7 +19,7 @@ This is a demo implementation of the [Basement Chat package](https://github.com/
 - Requirements:
 
   - `git`
-  - `php >= 8.0`
+  - `php >= 8.1`
   - `node.js >= 18`
 
 - To install this demo repository, you can do the following steps:
